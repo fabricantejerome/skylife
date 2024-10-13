@@ -1,0 +1,211 @@
+<header class="relative">
+  <nav class="px-5 flex justify-between items-center fixed w-full">
+    <%= link_to 'Skylife', root_path %>
+    <ul class="flex">
+      <li class="px-5 py-2">
+        <%= link_to 'Virtual Call', root_path, class: 'link' %>
+      </li>
+      <li class="px-5 py-2">
+        <%= link_to 'Chat', root_path, class: 'link' %>
+      </li>
+      <li class="px-5 py-2">
+        <%= link_to 'Menu', root_path, class: 'link' %>
+      </li>
+    </ul>
+  </nav>
+  <%= image_tag 'home_bg_banner.jpg', alt: 'header image', class: "object-cover w-full" %>
+</header>
+
+<nav class="px-5 py-5">
+  <ul class="grid grid-cols-12 text-center font-medium gap-5 text-xs">
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-flight.gif', class: 'w-11/12', alt: 'src' %>
+        Flights
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-02a.png', class: 'w-11/12', alt: 'src' %>
+        International
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-03a.png', class: 'w-11/12', alt: 'src' %>
+        Domestic
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-04a.png', class: 'w-11/12', alt: 'src' %>
+        Premium
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-05a.png', class: 'w-11/12', alt: 'src' %>
+        Cruises
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-06a.png', class: 'w-11/12', alt: 'src' %>
+        Visa
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-07a.png', class: 'w-11/12', alt: 'src' %>
+        Insurance
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-08a.png', class: 'w-11/12', alt: 'src' %>
+        Erail/JR
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-09a.png', class: 'w-11/12', alt: 'src' %>
+        R-Points
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-10a.png', class: 'w-11/12', alt: 'src' %>
+        MICE
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-11a.png', class: 'w-11/12', alt: 'src' %>
+        Event
+      <% end %>
+    </li>
+    <li>
+      <%= link_to root_path, class: 'link' do %>
+        <%= image_tag 'icon-12a.png', class: 'w-11/12', alt: 'src' %>
+        About Us
+      <% end %>
+    </li>
+  </ul>
+</nav>
+
+<div class="w-full px-5 py-5">
+  <%= image_tag 'ban_why_lg.jpg', alt: 'banner' %>
+</div>
+
+<section class="exclusive-flight-group-tours px-5 mt-8">
+  <h1 class="text-lg font-medium mb-4">Exclusive Flight Group Tours</h1>
+  <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-3 gap-px">
+      <%= image_tag 'package_109441_1.jpg', class: 'col-span-full', alt: 'src' %>
+      <%= image_tag 'package_109441_2.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_3.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_4.jpg', alt: 'src' %>
+
+      <div class="col-span-full grid grid-cols-3 my-2 items-center">
+        <div>
+          <p class="uppercase bg-red-500 text-white rounded p-1 inline-block text-sm">Hot Deal</p>
+        </div>
+        <p class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"></path></svg>
+          6D4N
+        </p>
+        <p class="text-end">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg>
+          2 Cities
+        </p>
+      </div>
+
+      <h2 class="col-span-full font-medium mb-2">MONGOLIA WINTER THRILL "A LAND OF ETERNAL BLUE SKY</h2>
+      <div class="col-span-full grid grid-cols-2 text-sm mb-2">
+        <div>
+          <p class="text-blue-600 border border-sky-700 rounded inline-block p-1">Departure & Info</p>
+        </div>
+        <p class="text-end text-red-600">From USD <span class="text-lg">1,699</span>/person</p>
+      </div>
+
+      <div class="col-span-full grid grid-cols-2 text-sm items-center">
+        <p class="text-blue-700 text-xs">#BESTCHOICE, #SPECIAL FLIGHT</p>
+        <div class="text-end">
+          <p class="inline-block text-xs bg-gray-200 text-gray-800 rounded px-3 py-1.5">More Mongolia Tours</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-3 gap-px">
+      <%= image_tag 'package_109441_1.jpg', class: 'col-span-full', alt: 'src' %>
+      <%= image_tag 'package_109441_2.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_3.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_4.jpg', alt: 'src' %>
+
+      <div class="col-span-full grid grid-cols-3 my-2 items-center">
+        <div>
+          <p class="uppercase bg-red-500 text-white rounded p-1 inline-block text-sm">Hot Deal</p>
+        </div>
+        <p class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"></path></svg>
+          6D4N
+        </p>
+        <p class="text-end">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg>
+          2 Cities
+        </p>
+      </div>
+
+      <h2 class="col-span-full font-medium mb-2">MONGOLIA WINTER THRILL "A LAND OF ETERNAL BLUE SKY</h2>
+      <div class="col-span-full grid grid-cols-2 text-sm mb-2">
+        <div>
+          <p class="text-blue-600 border border-sky-700 rounded inline-block p-1">Departure & Info</p>
+        </div>
+        <p class="text-end text-red-600">From USD <span class="text-lg">1,699</span>/person</p>
+      </div>
+
+      <div class="col-span-full grid grid-cols-2 text-sm items-center">
+        <p class="text-blue-700 text-xs">#BESTCHOICE, #SPECIAL FLIGHT</p>
+        <div class="text-end">
+          <p class="inline-block text-xs bg-gray-200 text-gray-800 rounded px-3 py-1.5">More Mongolia Tours</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3 gap-px">
+      <%= image_tag 'package_109441_1.jpg', class: 'col-span-full', alt: 'src' %>
+      <%= image_tag 'package_109441_2.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_3.jpg', alt: 'src' %>
+      <%= image_tag 'package_109441_4.jpg', alt: 'src' %>
+
+      <div class="col-span-full grid grid-cols-3 my-2 items-center">
+        <div>
+          <p class="uppercase bg-red-500 text-white rounded p-1 inline-block text-sm">Hot Deal</p>
+        </div>
+        <p class="text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-68-76a12,12,0,1,1-12-12A12,12,0,0,1,140,132Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,132ZM96,172a12,12,0,1,1-12-12A12,12,0,0,1,96,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,140,172Zm44,0a12,12,0,1,1-12-12A12,12,0,0,1,184,172Z"></path></svg>
+          6D4N
+        </p>
+        <p class="text-end">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="18" height="18" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg>
+          2 Cities
+        </p>
+      </div>
+
+      <h2 class="col-span-full font-medium mb-2">MONGOLIA WINTER THRILL "A LAND OF ETERNAL BLUE SKY</h2>
+      <div class="col-span-full grid grid-cols-2 text-sm mb-2">
+        <div>
+          <p class="text-blue-600 border border-sky-700 rounded inline-block p-1">Departure & Info</p>
+        </div>
+        <p class="text-end text-red-600">From USD <span class="text-lg">1,699</span>/person</p>
+      </div>
+
+      <div class="col-span-full grid grid-cols-2 text-sm items-center">
+        <p class="text-blue-700 text-xs">#BESTCHOICE, #SPECIAL FLIGHT</p>
+        <div class="text-end">
+          <p class="inline-block text-xs bg-gray-200 text-gray-800 rounded px-3 py-1.5">More Mongolia Tours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
