@@ -426,3 +426,15 @@
     <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-rpoints.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
   <% end %>
 </section>
+
+<script>
+  const topNav = document.querySelector("header > nav")
+
+  document.addEventListener('scroll', (e) => {
+    if (window.scrollY > 0) {
+      topNav.classList.add('bg-white')
+    } else {
+      topNav.classList.remove('bg-white')
+    }
+  })
+</script>
