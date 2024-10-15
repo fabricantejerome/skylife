@@ -1,7 +1,26 @@
-<div class="mx-10 border px-5 py-10">
+<nav class="px-5 flex justify-between items-center text-lg font-medium fixed w-full z-10 py-4 bg-white drop-shadow-lg">
+    <%= link_to 'Skylife', root_path %>
+    <ul class="flex items-center gap-2">
+      <li class="px-5 py-2 bg-white rounded-full flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><path d="M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z"></path></svg>
+        <%= link_to 'Virtual Call', root_path, class: 'link' %>
+      </li>
+      <li class="px-5 py-2 bg-white rounded-full flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path></svg>
+        <%= link_to 'Chat', root_path, class: 'link' %>
+      </li>
+      <li class="bg-black/20 rounded-full flex justify-between items-center w-32 p-0.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="40" height="40" fill="#fff" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z"></path></svg>
+        <%= link_to 'Menu', root_path, class: 'bg-white py-2 px-4  rounded-full' %>
+      </li>
+    </ul>
+</nav>
+
+<div class="mx-10 border px-5 pt-8">
+    <div class="mt-20">
     <h2 class="text-blue-600 uppercase text-md font-medium">Skylife Customer Center</h2>
     <h1 class="text-2xl uppercase font-bold mb-6">About Us</h1>
-
+    </div>
     <section class="flex gap-5 mb-12">
         <div class="flex-1">
             <h3 class="uppercase font-bold text-lg mb-4">Who we are</h3>
@@ -50,8 +69,8 @@
 
     <section class="mission-vision my-4">
         <div class="flex items-center gap-1 mb-4">
-            <h2 class="text-lg font-bold">MISSION & VISION</h2>
-            <div class="flex-1 h-px bg-gray-400"></div>
+            <h2 class="text-lg font-bold uppercase">MISSION & VISION</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
         </div>
 
         <div class="flex gap-4">
@@ -76,5 +95,59 @@
                 </p>
             </div>
         </div>
+    </section>
+
+    <section class="leading-industry my-8">
+        <div class="flex items-center gap-1 mb-4">
+            <h2 class="text-lg font-bold uppercase">LEADER IN EVOLVING TRAVEL PARADIGM!</h2>
+            <div class="flex-1 h-px bg-gray-200"></div>
+        </div>
+
+        <div class="flex gap-4">
+            <div class="flex-1">
+                <h3 class="font-medium mb-2">Our Competitive Edge</h3>
+                <ul>
+                    <li>
+                        RAKSO Travel is equipped with advanced technology in both hardware and software applications to guarantee efficiency of operations.
+                    </li>
+                    <li>
+                        Our services are well within the reach of our clientele, either online or offline.
+                    </li>
+                    <li>
+                        Travel sure, travel safe! Free travel insurance.
+                    </li>
+                    <li>
+                        Loyalty rewards program (R-Points)
+                    </li>
+                    <li>
+                        We have a head quarter and 8 branches offices nationwide with 200+ employees working hand in hand all over the Philippines.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex-1">
+                <h3 class="font-medium mb-2">Our People</h3>
+                <p class="mb-2">
+                    We attribute our success to our people – a core of dedicated, well-trained, competent officers and staff who are committed to deliver a high-quality service.
+                </p>
+                <p>
+                    RAKSO TRAVEL continuously provides opportunities for staff development to ensure that its core personnel are kept abreast with the latest trends and technology, thus making them more responsive to challenges and industry dynamics.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info grid grid-cols-3 gap-4 mb-12">
+    <%= link_to root_path do %>
+        <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-branch.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
+    <% end %>
+    
+    <%= link_to root_path do %>
+        <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-flight.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
+    <% end %>
+
+    <%= link_to root_path do %>
+        <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-rpoints.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
+    <% end %>
     </section>
 </div>
