@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  package: MyString
+  price_per_head: MyString
+  name: MyString
+  location: MyString
+  promo: MyString
+  promo_price: MyString
+  inclusion: MyString
+  exclusion: MyString
+  travel_date: MyString
+  terms_and_condition: MyText
+  notes: MyString
+  meta_title: MyString
+  meta_description: MyString
+  keywords: MyString
+  google_analytics_tracking_id: MyString
+  conversion_tracking_setup: MyString
+  facebook: MyString
+  instagram: MyString
+  tiktok: MyString
+  category: one
+
+two:
+  package: MyString
+  price_per_head: MyString
+  name: MyString
+  location: MyString
+  promo: MyString
+  promo_price: MyString
+  inclusion: MyString
+  exclusion: MyString
+  travel_date: MyString
+  terms_and_condition: MyText
+  notes: MyString
+  meta_title: MyString
+  meta_description: MyString
+  keywords: MyString
+  google_analytics_tracking_id: MyString
+  conversion_tracking_setup: MyString
+  facebook: MyString
+  instagram: MyString
+  tiktok: MyString
+  category: two

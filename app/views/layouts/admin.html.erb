@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skylife</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <main class="flex">
+      <nav class="min-w-80 bg-sky-600 text-center text-white min-h-svh">
+        <ul class="text-lg">
+          <li class="border-b border-white py-3 text-2xl">
+            <%= link_to 'Logo', admin_path, class: 'link' %>
+          </li>
+          <li class="border-b border-white py-3">
+            <%= link_to 'Dashboard', admin_path, class: 'link' %>
+          </li>
+          <li class="border-b border-white py-3">
+            <%= link_to 'Users', admin_path, class: 'link' %>
+          </li>
+          <li class="border-b border-white py-3">
+            <%= link_to 'Tours', admin_tours_path, class: 'link' %>
+          </li>
+          <li class="border-b border-white py-3">
+            <%= link_to 'Categories', admin_categories_path, class: 'link' %>
+          </li>
+          <li class="border-b border-white py-3">
+            <%= link_to "Sign out", destroy_admin_session_path, data: { 'turbo-method' => :delete, 'turbo_confirm' => "Are you sure?"  } %>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flex-1 p-10">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>

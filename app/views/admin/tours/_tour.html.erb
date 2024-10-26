@@ -1,0 +1,116 @@
+<div id="<%= dom_id tour %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Package:</strong>
+    <%= tour.package %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price per head:</strong>
+    <%= tour.price_per_head %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= tour.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Location:</strong>
+    <%= tour.location %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Promo:</strong>
+    <%= tour.promo %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Promo price:</strong>
+    <%= tour.promo_price %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Inclusion:</strong>
+    <%= tour.inclusion %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Exclusion:</strong>
+    <%= tour.exclusion %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Travel date:</strong>
+    <%= tour.travel_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Terms and condition:</strong>
+    <%= tour.terms_and_condition %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Notes:</strong>
+    <%= tour.notes %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Featured Image:</strong>
+    <%= image_tag tour.featured_image.present? ? tour.featured_image : '', alt: 'src' %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Gallery Images:</strong>
+    <% if tour.gallery_images.any? %>
+      <% tour.gallery_images.each do |image| %>
+        <%= image_tag image.present? ? image : '', alt: 'src' %>
+      <% end %>
+    <% end %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta title:</strong>
+    <%= tour.meta_title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Meta description:</strong>
+    <%= tour.meta_description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Keywords:</strong>
+    <%= tour.keywords %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Google analytics tracking:</strong>
+    <%= tour.google_analytics_tracking_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Conversion tracking setup:</strong>
+    <%= tour.conversion_tracking_setup %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Facebook:</strong>
+    <%= tour.facebook %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Instagram:</strong>
+    <%= tour.instagram %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Tiktok:</strong>
+    <%= tour.tiktok %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= tour.category_id %>
+  </p>
+
+</div>
