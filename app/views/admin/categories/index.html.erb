@@ -1,21 +1,38 @@
-<div class="w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-  <% end %>
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<% end %>
 
-  <% content_for :title, "Categories" %>
+<h1 class="text-2xl text-green-800 text-center uppercase font-medium mt-12">Categories</h1>
 
-  <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Categories</h1>
-    <%= link_to "New category", new_admin_category_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-  </div>
-
-  <div id="admin_categories" class="min-w-full">
-    <% @admin_categories.each do |admin_category| %>
-      <%= render admin_category %>
-      <p>
-        <%= link_to "Show this category", [:admin, admin_category], class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      </p>
-    <% end %>
-  </div>
+<div class="text-end">
+    <%= link_to 'Add New', new_admin_category_path, class: 'py-2 px-4 bg-sky-600 text-white rounded' %>
 </div>
+    
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-12">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @admin_categories.each do |admin_category| %>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                      <%= admin_category.name %>
+                    </th>
+                    <td class="px-6 py-4">
+                      <%= link_to 'Edit', edit_admin_category_path(admin_category), class: 'font-medium text-green-800 dark:text-green-500 hover:underline' %>
+                    </td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+
+
