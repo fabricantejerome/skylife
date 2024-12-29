@@ -3,5 +3,7 @@ class Tour < ApplicationRecord
 
   has_one_attached :featured_image
 
+  has_one_attached :banner_image
+
   has_many_attached :gallery_images
 end

@@ -65,6 +65,6 @@ class Admin::ToursController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_tour_params
-      params.require(:tour).permit(:package, :price_per_head, :name, :location, :promo, :promo_price, :inclusion, :exclusion, :travel_date, :terms_and_condition, :notes, :meta_title, :meta_description, :keywords, :google_analytics_tracking_id, :conversion_tracking_setup, :facebook, :instagram, :tiktok, :category_id, :featured_image, gallery_images: [])
+      params.require(:tour).permit(:package, :price_per_head, :name, :location, :promo, :promo_price, :inclusion, :exclusion, :travel_date, :terms_and_condition, :notes, :meta_title, :meta_description, :keywords, :google_analytics_tracking_id, :conversion_tracking_setup, :facebook, :instagram, :tiktok, :category_id, :featured_image, :banner_image, gallery_images: [])
     end
 end

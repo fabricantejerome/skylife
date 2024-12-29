@@ -1,6 +1,6 @@
 <header class="relative" data-controller="navigation">
   <nav class="px-5 flex justify-between items-center text-lg font-medium fixed w-full z-10 py-4 drop-shadow-lg">
-    <%= link_to 'Skylife', root_path %>
+    <%= link_to '', root_path %>
     <ul class="flex items-center gap-2">
       <li class="bg-black/20 rounded-full flex justify-between items-center w-32 p-0.5">
         <%= link_to 'Menu', root_path, class: 'bg-white py-2 px-4  rounded-full' %>
@@ -72,16 +72,12 @@
     </li>
     <li>
       <%= link_to about_path, class: 'link' do %>
-        <%= image_tag 'icon-12a.png', class: 'w-11/12', alt: 'src' %>
+        <%= image_tag 'ABOUT US.png', class: 'w-11/12', alt: 'src' %>
         About Us
       <% end %>
     </li>
   </ul>
 </nav>
-
-<div class="w-full px-5 py-5">
-  <%= image_tag 'ban_why_lg.jpg', alt: 'banner' %>
-</div>
 
 <section class="exclusive-flight-group-tours px-5 mt-8 mb-12">
   <h1 class="text-lg font-medium mb-4">Exclusive Flight Group Tours</h1>
@@ -382,19 +378,47 @@
   </div>
 </section>
 
-<section class="info grid grid-cols-3 gap-4 px-5 mb-12">
-  <%= link_to root_path do %>
-    <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-branch.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
-  <% end %>
-  
-  <%= link_to root_path do %>
-    <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-flight.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
-  <% end %>
+<section class="local-top-destination px-5 mt-8 mb-12">
+  <h1 class="text-lg font-medium mb-4">Local Top Destination</h1>
 
-  <%= link_to root_path do %>
-    <%= image_tag "https://www.raksotravel.com/Content/img/banner/ban-bot-rpoints.jpg", class: 'border border-gray-300 rounded-lg', alt: 'src' %>
-  <% end %>
+  <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+    <div class="relative">
+      <%= image_tag 'South Korea.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">South Korea</h2>
+    </div>
+
+    <div class="relative">
+      <%= image_tag 'Japan.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Japan</h2>
+    </div>
+
+    <div class="relative">
+      <%= image_tag 'Hongkong.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Hongkong</h2>
+    </div>
+
+    <div class="relative">
+      <%= image_tag 'Singapore.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Singapore</h2>
+    </div>
+
+    <div class="relative">
+      <%= image_tag 'taiwan.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Taiwan</h2>
+    </div>
+
+    <div class="relative">
+      <%= image_tag 'Thailand.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Thailand</h2>
+    </div>
+
+     <div class="relative">
+      <%= image_tag 'Vietnam.png', class: "rounded", alt: 'src' %>
+      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Vietnam</h2>
+    </div>
+  </div>
 </section>
+
 
 <footer class="border-t pt-8">
   <div class="flex justify-center gap-5 mb-4">
