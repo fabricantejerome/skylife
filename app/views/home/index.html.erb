@@ -83,38 +83,20 @@
   <h1 class="text-lg font-medium mb-4 uppercase">Flash Sale</h1>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
+    <% @flash_sales.each do |tour| %>
+      <div>
+        <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
 
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
+        <h2 class="col-span-full mt-2 font-bold text-xl"><%= tour.name %></h2>
+        <p class="font-bold text-skylife_orange mt-0 text-lg">₱<%= tour.price_per_head %>/pax</p>
+        
+        <div class="text-center mt-6">
+          <%= link_to tour_path(tour), class: 'bg-skylife_blue text-white px-12 py-2 rounded-full uppercase' do %>
+            Tour Details
+          <% end %>
+        </div>
       </div>
-    </div>
-    
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
-
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
-      </div>
-    </div>
-
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
-
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
 
@@ -122,38 +104,20 @@
   <h1 class="text-lg font-medium mb-4 uppercase">New Tour Packages </h1>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
+    <% @new_packages.each do |tour| %>
+      <div>
+        <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
 
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
+        <h2 class="col-span-full mt-2 font-bold text-xl"><%= tour.name %></h2>
+        <p class="font-bold text-skylife_orange mt-0 text-lg">₱<%= tour.price_per_head %>/pax</p>
+        
+        <div class="text-center mt-6">
+          <%= link_to tour_path(tour), class: 'bg-skylife_blue text-white px-12 py-2 rounded-full uppercase' do %>
+            Tour Details
+          <% end %>
+        </div>
       </div>
-    </div>
-    
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
-
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
-      </div>
-    </div>
-
-    <div>
-      <%= image_tag 'featured-image.jpg', class: 'col-span-full', alt: 'src' %>
-
-      <h2 class="col-span-full mt-2 font-bold text-xl">3D2N SIARGAO ALL IN PACKAGE</h2>
-      <p class="font-bold text-orange-500 mt-0 text-lg">₱15,999/pax</p>
-      
-      <div class="text-center mt-6">
-        <button class="bg-blue-800 text-white px-12 py-2 rounded-full uppercase">Tour Details</button>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
 

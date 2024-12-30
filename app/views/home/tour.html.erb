@@ -1,279 +1,84 @@
+<div class="bg-white">
+    <section class="banner">
+        <%= image_tag @tour.banner_image, alt: 'banner', class: 'w-full' %>
 
-<div class="bg-gray-100">
-    <section class="banner relative">
-        <%= image_tag 'Tour Detailed - Banner.png', alt: 'banner', class: 'w-full' %>
-
-        <div class="package w-10/12 mx-auto flex justify-between absolute bg-white rounded-full p-6 left-20 -bottom-16 shadow-md">
-            <div>
-                <p class="text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z"></path></svg>
-                    5/5 (1 review)
-                </p>
+        <div class="package w-10/12 mx-auto flex justify-between bg-gray-100 rounded-full p-6 mt-8 shadow-md">
+            <div class="flex items-center">
                 <h1 class="text-3xl font-bold">
-                    3 Night Stay (Apartment) Sports City 5 Star Quality
+                   <%= @tour.name %>
                 </h1>
             </div>
             <div>
-                <p class="text-gray-500">
-                    From
+                <p class="text-skylife_blue">
+                    Starts at
                 </p>
-                <h1 class="text-3xl font-bold">
-                    20.00 AED
+                <h1 class="text-3xl font-bold text-orange-500">
+                    ₱<%= @tour.price_per_head %>/pax
                 </h1>
-                <button class="px-4 py-2 bg-yellow-500 rounded-full">Book Now</button>
-                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><path d="M176,160a39.89,39.89,0,0,0-28.62,12.09l-46.1-29.63a39.8,39.8,0,0,0,0-28.92l46.1-29.63a40,40,0,1,0-8.66-13.45l-46.1,29.63a40,40,0,1,0,0,55.82l46.1,29.63A40,40,0,1,0,176,160Zm0-128a24,24,0,1,1-24,24A24,24,0,0,1,176,32ZM64,152a24,24,0,1,1,24-24A24,24,0,0,1,64,152Zm112,72a24,24,0,1,1,24-24A24,24,0,0,1,176,224Z"></path></svg>
             </div>
         </div>
     </section>
 
-    <section class="itinerary w-10/12 mx-auto mt-32">
-        <h1 class="text-3xl font-bold">Tour Itinerary</h1>
-        <p class="text-gray-500 mb-4">Highlights Of Your Journey</p>
-
-        <div class="rounded-lg flex bg-amber-50 mb-10">
-            <div class="flex-2 text-center p-4 bg-yellow-500 rounded-l-lg flex items-center">
-                <p class="text-lg font-medium">Day <br>1</p>
-            </div>
-            <div class="flex-8 flex items-center justify-between text-center">
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-02.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Burg Khalifa Sightseeing</p>
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-03.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Dubai Mall Sightseeing</p>
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-04.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Dubai Frame Sightseeing</p>
-                    
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-05.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Cruise Travel Including Dinner</p>
-                    
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-01.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Pick & Drop from Apartment</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="rounded-lg flex bg-amber-50 mb-10">
-            <div class="flex-2 text-center p-4 bg-yellow-500 rounded-l-lg flex items-center">
-                <p class="text-lg font-medium">Day <br>2</p>
-            </div>
-            <div class="flex-8 flex items-center justify-between text-center">
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-02.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Burg Khalifa Sightseeing</p>
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-03.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Dubai Mall Sightseeing</p>
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-04.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Dubai Frame Sightseeing</p>
-                    
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-05.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Cruise Travel Including Dinner</p>
-                    
-                </div>
-                <div class="p-6">
-                    <div class="border-2 border-dashed border-gray-400 p-6 rounded-full inline-block">
-                        <%= image_tag 'itenerary-01.png', alt: 'src', class: 'mx-auto h-10 w-10' %>
-                    </div>
-                    <p class="text-sm text-gray-500">Pick & Drop from Apartment</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="tour w-10/12 mx-auto my-20">
-        <h1 class="text-3xl font-bold">Tour Plan</h1>
-
-        <div class="rounded-full shadow-lg mt-4">
-            <div class="bg-amber-50 text-center p-2 rounded-t space-x-2">
-                <label>
-                    <input type="radio" name="plan-stay">
-                    Without Stay
-                </label>
-                <label>
-                    <input type="radio" name="plan-stay">
-                    With Stay   
-                </label>
-            </div>
-
-            <div class="flex bg-white flex-col">
-                <div class="flex gap-4 py-5 px-10 justify-between basis-full">
-                    <div>
-                        <label>Tour Date<span class="text-red-500">*</span></label><br>
-                        <input type="date" class="rounded">
-                    </div>
-                    <div>
-                        <label>Select Hotel<span class="text-red-500">*</span></label><br>
-                        <select class="rounded w-32">
-                            <option>Millennium Airport Hotel Dubai</option>
-                            <option>Flora Inn Dubai Airport</option>    
-                        </select>
-                    </div>
-                    <div>
-                        <label>Pickup address<span class="text-red-500">*</span></label><br>
-                        <select class="rounded w-32">
-                            <option>Millennium Airport Hotel Dubai</option>
-                            <option>Flora Inn Dubai Airport</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Time Slot<span class="text-red-500">*</span></label><br>
-                        <select class="rounded w-32">
-                            <option>Millennium Airport Hotel Dubai</option>
-                            <option>Flora Inn Dubai Airport</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Adult<span class="text-red-500">*</span></label><br>
-                        <input type="text" class="rounded w-16">
-                    </div>
-
-                    <div>
-                        <label>Child</label><br>
-                        <input type="text" class="rounded w-16">
-                    </div>
-
-                    <div>
-                        <label>Infant</label><br>
-                        <input type="text" class="rounded w-16">
-                    </div>
-                </div>
-
-                <div class="basis-full px-10">
-                    <label>Special Request(Optional)</label><br>
-                    <textarea class="w-full h-48" placeholder="Type here...">
-                    </textarea>
-                </div>
-
-                <div class="px-10 flex justify-between py-4">
-                    <h2 class="font-bold text-2xl">Total : 20.00 AED</h2>
-                    <button class="bg-yellow-500 py-3 px-6 rounded-full">Book Now</button>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section class="offers bg-yellow-500 py-20 px-5">
-        <h1 class="text-center text-3xl font-bold mb-10">We Offer Best Services</h1>
-        <div class="flex gap-10">
-            <div>
-                <%= image_tag "travelbird-booking-service02.jpg", alt: 'src', class: "rounded-md" %>
-                <h3 class="font-bold text-lg">Easy Booking</h3>
-                <p>Get our tour guide for the best experience.</p>
-            </div>
-
-            <div>
-                <%= image_tag "travelbird-booking-service03.jpg", alt: 'src', class: "rounded-md" %>
-                <h3 class="font-bold text-lg">Always Support</h3>
-                <p>Get our tour guide for the best experience.</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="highlights py-20">
+    <section class="inclusion py-20">
         <div class="w-10/12 flex mx-auto">
             <div class="flex-1">
-                <h1 class="text-3xl font-bold mb-4 border-l-4 border-amber-300 bg-amber-100 inline-block rounded-lg px-4 py-2">Highlights</h1>
-                <p>
-                    Another must-try cruise option is Dhow Cruise Marina in Dubai. For sheer water fun and thrill, select from our Atlantis Aquaventure tours. But if it’s a combo of culture, history and nature you’re looking for, you can’t go wrong with our exhilarating
+                <h1 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Travel Period: </h1>
+                <p class="text-2xl mb-8">
+                    <%= @tour.travel_date %>
                 </p>
 
-                <ul class="list-disc ml-4 mt-4 space-y-2">
-                    <li>Accommodation in the mentioned hotel</li>
-                    <li>Dubai City tour with all Major places</li>
-                    <li>Desert safari with BBQ Dinner and Belly dancing</li>
-                    <li>Dhow Cruise Marina with International buffet</li>
-                    <li>Burj Khalifa 124th Floor + Dubai mall and Musical</li>
-                    <li>Apartment Transfer</li>
-                    <li>All tours and transfer on SIC</li>
-                </ul>
+                <% if @tour_inclusion.any? %>
+                    <h2 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Inclusions: </h2>
+                    
+                    <ul class="list-disc mt-4 space-y-2 text-2xl list-none list-outside">
+                        <% @tour_inclusion.each do |item| %>
+                            <li>✅ <%= item %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
             </div>
 
             <div class="flex-1">
-                <%= image_tag 'feature-img-02.png', alt: 'src' %>
+                <%= image_tag @tour.gallery_images.first, alt: 'src' %>
             </div>
         </div>
     </section>
 
-    <section class="tour-inclusion py-20">
+    <section class="tour-inclusion py-20 bg-skylife_bg">
         <div class="w-10/12 flex mx-auto">
             <div class="flex-1">
-                <%= image_tag 'feature-img-03.png', alt: 'src' %>
+                <%= image_tag @tour.gallery_images.last, alt: 'src' %>
             </div>
 
-            <div class="flex-1">
-                <h1 class="text-3xl font-bold mb-4 border-l-4 border-amber-300 bg-amber-100 inline-block rounded-lg px-4 py-2">Tour Inclusions</h1>
-                <p>
-                    Enjoy a memorable evening aboard a traditional Arabian boat ‘Dhow’ along the corniche. Meticulously crafted Arabian sailing vessels have become iconic on the waters
-                </p>
-
-                <ul class="list-disc ml-4 mt-4 space-y-2">
-                    <li>Accommodation in the mentioned hotel</li>
-                    <li>Dubai City tour with all Major places</li>
-                    <li>Desert safari with BBQ Dinner and Belly dancing</li>
-                    <li>Dhow Cruise Marina with International buffet</li>
-                    <li>Burj Khalifa 124th Floor + Dubai mall and Musical</li>
-                    <li>Apartment Transfer</li>
-                </ul>
+            <div class="flex-1 ml-8">
+                <% if @tour_exclusion.any? %>
+                    <h2 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Inclusions: </h2>
+                    
+                    <ul class="list-disc mt-4 space-y-2 text-2xl list-none">
+                        <% @tour_exclusion.each do |item| %>
+                            <li>❌ <%= item %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
             </div>
         </div>
     </section>
 
-    <section class="important-information py-20">
+    <section class="terms-and-condition py-20">
         <div class="w-10/12 flex mx-auto">
             <div class="flex-1">
-                <h1 class="text-3xl font-bold mb-4 border-l-4 border-amber-300 bg-amber-100 inline-block rounded-lg px-4 py-2">Important Information</h1>
-                <p>
-                    Another must-try cruise option is Dhow Cruise Marina in Dubai. For sheer water fun and thrill, select from our Atlantis Aquaventure tours. But if it’s a combo of culture, history and nature you’re looking for, you can’t go wrong with our exhilarating
-                </p>
-
-                <ul class="list-disc ml-4 mt-4 space-y-2">
-                    <li>Accommodation in the mentioned hotel</li>
-                    <li>Dubai City tour with all Major places</li>
-                    <li>Desert safari with BBQ Dinner and Belly dancing</li>
-                    <li>Dhow Cruise Marina with International buffet</li>
-                    <li>Burj Khalifa 124th Floor + Dubai mall and Musical</li>
-                    <li>Apartment Transfer</li>
-                    <li>All tours and transfer on SIC</li>
-                </ul>
+                <h1 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Terms and Condition</h1>
+                <% if @tour_terms_and_condition.any? %>
+                    <ul class="list-disc mt-4 space-y-2 list-none text-xl">
+                        <% @tour_terms_and_condition.each do |item| %>
+                            <li><%= item %></li>
+                        <% end %>
+                    </ul>
+                <% end %>
             </div>
 
-            <div class="flex-1">
-                <%= image_tag 'feature-img-04.png', alt: 'src' %>
+            <div class="flex-1 flex items-center justify-center">
+               <button class="bg-skylife_orange text-white px-12 py-2 text-2xl rounded-lg">Inquire Now!</button>
             </div>
         </div>
     </section>

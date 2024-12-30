@@ -12,6 +12,11 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        skylife_orange: '#ff7500',
+        skylife_blue: '#0096d2',
+        skylife_bg: '#FDEBDC'
+      }
     },
   },
   plugins: [
