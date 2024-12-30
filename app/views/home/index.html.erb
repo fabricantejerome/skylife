@@ -85,7 +85,9 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
     <% @flash_sales.each do |tour| %>
       <div>
-        <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
+        <% if tour.featured_image.present? %>
+          <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
+        <% end %>
 
         <h2 class="col-span-full mt-2 font-bold text-xl"><%= tour.name %></h2>
         <p class="font-bold text-skylife_orange mt-0 text-lg">₱<%= tour.price_per_head %>/pax</p>
@@ -106,8 +108,10 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
     <% @new_packages.each do |tour| %>
       <div>
-        <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
-
+        <% if tour.featured_image.present? %>
+          <%= image_tag tour.featured_image, class: 'col-span-full', alt: 'src' %>
+        <% end %>
+        
         <h2 class="col-span-full mt-2 font-bold text-xl"><%= tour.name %></h2>
         <p class="font-bold text-skylife_orange mt-0 text-lg">₱<%= tour.price_per_head %>/pax</p>
         
