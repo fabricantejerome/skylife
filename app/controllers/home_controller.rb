@@ -25,4 +25,9 @@ class HomeController < ApplicationController
       @category_name = "New Packages"
     end
   end
+
+  def search
+    @tours = Tour.where("LOWER(name) LIKE ?", "%#{params[:q].downcase}%")
+    @category_name = "Search results for '#{params[:q]}'"
+  end
 end
