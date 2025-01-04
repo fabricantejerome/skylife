@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'admin' => "admin#index", as: :admin
   get "about" => "home#about", as: :about
   get "tour/:id" => "home#tour", as: :tour
+  get "category(/:id)" => "home#category", as: :category
   # Defines the root path route ("/")
   root "home#index"
 end
