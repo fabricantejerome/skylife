@@ -3,7 +3,7 @@ class Admin::ToursController < AdminController
 
   # GET /admin/tours or /admin/tours.json
   def index
-    @admin_tours = Tour.all
+    @admin_tours = Tour.all.order(:created_at => :desc)
   end
 
   # GET /admin/tours/1 or /admin/tours/1.json
