@@ -49,7 +49,9 @@
     <section class="tour-inclusion py-20 bg-skylife_bg">
         <div class="w-10/12 flex mx-auto">
             <div class="flex-1">
-                <%= image_tag @tour.gallery_images.last, alt: 'src' %>
+                <% if @tour.gallery_images.last.present? %>
+                     <%= image_tag @tour.gallery_images.last, alt: 'src' %>
+                <% end %>
             </div>
 
             <div class="flex-1 ml-8">
