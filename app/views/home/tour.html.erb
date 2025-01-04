@@ -39,7 +39,9 @@
             </div>
 
             <div class="flex-1">
-                <%= image_tag @tour.gallery_images.first, alt: 'src' %>
+                <% if @tour.gallery_images.first.present? %>
+                    <%= image_tag @tour.gallery_images.first, alt: 'src' %>
+                <% end %>
             </div>
         </div>
     </section>
