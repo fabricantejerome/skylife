@@ -1,5 +1,5 @@
 <header class="relative" data-controller="navigation">
-  <%= video_tag "Home Page - Banner.mp4", autoplay: :autoplay, loop: :loop, muted: :muted %>
+    <%= video_tag "Home Page - Banner.mp4", autoplay: :autoplay, loop: :loop, muted: :muted %>
 
     <%= form_with url: search_path, method: :get do |form| %>
         <div class="absolute top-1/3 w-full flex justify-center text-white">
@@ -101,38 +101,52 @@
 
   <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
     <div class="relative">
-      <%= image_tag 'South Korea.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">South Korea</h2>
+      <%= link_to search_path(q: 'south korea'), class: 'link' do %>
+        <%= image_tag 'South Korea.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">South Korea</h2>
+      <% end %>
     </div>
 
     <div class="relative">
-      <%= image_tag 'Japan.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Japan</h2>
+      <%= link_to search_path(q: 'japan'), class: 'link' do %>
+        <%= image_tag 'Japan.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Japan</h2>
+      <% end %>
     </div>
 
     <div class="relative">
-      <%= image_tag 'Hongkong.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Hongkong</h2>
+      <%= link_to search_path(q: 'hong kong'), class: 'link' do %>
+        <%= image_tag 'Hongkong.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Hongkong</h2>
+      <% end %>
     </div>
 
     <div class="relative">
-      <%= image_tag 'Singapore.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Singapore</h2>
+      <%= link_to search_path(q: 'singapore'), class: 'link' do %>
+        <%= image_tag 'Singapore.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Singapore</h2>
+      <% end %>
     </div>
 
     <div class="relative">
-      <%= image_tag 'taiwan.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Taiwan</h2>
+      <%= link_to search_path(q: 'taiwan'), class: 'link' do %>
+        <%= image_tag 'taiwan.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Taiwan</h2>
+      <% end %>
     </div>
 
     <div class="relative">
-      <%= image_tag 'Thailand.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Thailand</h2>
+      <%= link_to search_path(q: 'thailand'), class: 'link' do %>
+        <%= image_tag 'Thailand.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Thailand</h2>
+      <% end %>
     </div>
 
-     <div class="relative">
-      <%= image_tag 'Vietnam.png', class: "rounded", alt: 'src' %>
-      <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Vietnam</h2>
+    <div class="relative">
+      <%= link_to search_path(q: 'vietnam'), class: 'link' do %>
+        <%= image_tag 'Vietnam.png', class: "rounded", alt: 'src' %>
+        <h2 class="absolute bottom-0 uppercase p-2 font-bold text-white drop-shadow-lg text-lg">Vietnam</h2>
+      <% end %>
     </div>
   </div>
 </section>
