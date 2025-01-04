@@ -1,7 +1,10 @@
 <div class="bg-white">
     <section class="banner">
-        <%= image_tag @tour.banner_image, alt: 'banner', class: 'w-full' %>
-
+        
+        <% if @tour.banner_image.present? %>
+            <%= image_tag @tour.banner_image, alt: 'banner', class: 'w-full' %>
+        <% end %>
+        
         <div class="package w-10/12 mx-auto flex justify-between bg-gray-100 rounded-full p-6 mt-8 shadow-md">
             <div class="flex items-center">
                 <h1 class="text-3xl font-bold">
@@ -32,7 +35,7 @@
                     
                     <ul class="list-disc mt-4 space-y-2 text-2xl list-none list-outside">
                         <% @tour_inclusion.each do |item| %>
-                            <li>✅ <%= item %></li>
+                            <li><%= item %></li>
                         <% end %>
                     </ul>
                 <% end %>
@@ -40,7 +43,7 @@
 
             <div class="flex-1">
                 <% if @tour.gallery_images.first.present? %>
-                    <%= image_tag @tour.gallery_images.first, alt: 'src' %>
+                    <%= image_tag @tour.gallery_images.first, class: 'aspect-square', alt: 'src' %>
                 <% end %>
             </div>
         </div>
@@ -50,7 +53,7 @@
         <div class="w-10/12 flex mx-auto">
             <div class="flex-1">
                 <% if @tour.gallery_images.last.present? %>
-                     <%= image_tag @tour.gallery_images.last, alt: 'src' %>
+                     <%= image_tag @tour.gallery_images.last, class: 'aspect-square', alt: 'src' %>
                 <% end %>
             </div>
 
@@ -60,7 +63,7 @@
                     
                     <ul class="list-disc mt-4 space-y-2 text-2xl list-none">
                         <% @tour_exclusion.each do |item| %>
-                            <li>❌ <%= item %></li>
+                            <li><%= item %></li>
                         <% end %>
                     </ul>
                 <% end %>
