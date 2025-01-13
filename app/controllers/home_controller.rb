@@ -27,7 +27,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    @tours = Tour.where("LOWER(name) LIKE ?", "%#{params[:q].downcase}%")
+    @tours = Tour.where("LOWER(name) LIKE ?", "%#{params[:q].downcase}%").order(:created_at => :desc)
     @category_name = "Search results for '#{params[:q]}'"
   end
 end

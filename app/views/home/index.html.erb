@@ -82,7 +82,7 @@
       <% end %>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <% category.tours.limit(3).each do |tour| %>
+        <% category.tours.order(:created_at => :desc).limit(3).each do |tour| %>
           <div>
             <% if tour.featured_image.present? %>
               <%= image_tag tour.featured_image, class: 'col-span-full aspect-square', alt: 'src' %>
