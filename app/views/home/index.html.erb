@@ -19,7 +19,9 @@
       <% @categories.each do |category| %>
         <li>
           <%= link_to category_path(category), class: 'link' do %>
-            <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+            <% if category.logo.present? %>
+              <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+            <% end %>
             <%= category.name %>
           <% end %>
         </li>
