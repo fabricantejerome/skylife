@@ -15,54 +15,17 @@
 
 <nav class="px-5 py-5">
   <ul class="grid md:grid-cols-9 sm:grid-cols-6 grid-cols-4 justify-between text-center font-medium gap-5 text-sm">
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'Car and Van Rentals.png', class: 'w-10/12', alt: 'src' %>
-        Car & Van Rentals
+    <% if @categories.any? %>
+      <% @categories.each do |category| %>
+        <li>
+          <%= link_to category_path(category), class: 'link' do %>
+            <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+            <%= category.name %>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'international.png', class: 'w-11/12', alt: 'src' %>
-        International
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'local tour.png', class: 'w-11/12', alt: 'src' %>
-        Local Tour
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'Events Management.png', class: 'w-11/12', alt: 'src' %>
-        Events Management
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'flash sale.png', class: 'w-11/12', alt: 'src' %>
-        Flash Sale
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'Visa Processing.png', class: 'w-11/12', alt: 'src' %>
-        Visa
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'group blockings.png', class: 'w-11/12', alt: 'src' %>
-        Group Blockings
-      <% end %>
-    </li>
-    <li>
-      <%= link_to root_path, class: 'link' do %>
-        <%= image_tag 'Land Arrangement.png', class: 'w-11/12', alt: 'src' %>
-        Land Arrangement
-      <% end %>
-    </li>
+    <% end %>
+
     <li>
       <%= link_to about_path, class: 'link' do %>
         <%= image_tag 'ABOUT US.png', class: 'w-11/12', alt: 'src' %>

@@ -16,6 +16,7 @@ class HomeController < ApplicationController
   end
 
   def category
+    @categories = Category.all
     if params[:id].present?
       @category = Category.find(params[:id])
       @tours = @category.tours
@@ -27,6 +28,7 @@ class HomeController < ApplicationController
   end
 
   def search
+    @categories = Category.all
     @tours = Tour.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", "%#{params[:q].downcase}%", "%#{params[:q].downcase}%").order(:created_at => :desc)
     @category_name = "Search results for '#{params[:q]}'"
   end
