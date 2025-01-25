@@ -14,7 +14,7 @@
 </header>
 
 <nav class="px-5 py-5">
-  <ul class="grid md:grid-cols-9 sm:grid-cols-6 grid-cols-4 justify-between text-center font-medium gap-5 text-sm">
+  <ul class="grid md:grid-cols-9 auto-cols-[100px] grid-flow-col overflow-x-auto sm:overflow-visible justify-between text-center font-medium gap-5 text-sm">
     <% if @categories.any? %>
       <% @categories.each do |category| %>
         <li>
@@ -62,7 +62,7 @@
 <section class="international-top-destination px-5 mt-8 mb-12">
   <h1 class="text-lg font-medium mb-4">International Top Destination</h1>
 
-  <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+  <div class="grid md:grid-cols-8 auto-cols-[150px] grid-flow-col overflow-x-auto sm:overflow-visible gap-2">
     <div class="relative">
       <%= link_to search_path(q: 'south korea'), class: 'link' do %>
         <%= image_tag 'South Korea.png', class: "rounded", alt: 'src' %>
@@ -117,7 +117,7 @@
 <section class="local-top-destination px-5 mt-8 mb-12">
   <h1 class="text-lg font-medium mb-4">Local Top Destination</h1>
 
-  <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+  <div class="grid md:grid-cols-8 auto-cols-[150px] grid-flow-col overflow-x-auto sm:overflow-visible gap-2">
     <div class="relative">
       <%= link_to search_path(q: 'bohol'), class: 'link' do %>
         <%= image_tag 'Bohol.png', class: "rounded", alt: 'src' %>
