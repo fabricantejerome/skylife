@@ -5,35 +5,35 @@
             <%= image_tag @tour.banner_image, alt: 'banner', class: 'w-full' %>
         <% end %>
         
-        <div class="package w-10/12 mx-auto flex justify-between bg-gray-100 rounded-full p-6 mt-8 shadow-md">
+        <div class="package md:w-10/12 w-11/12 mx-auto flex justify-between bg-gray-100 rounded-full p-4 mt-4 md:p-6 md:mt-8 shadow-md">
             <div class="flex items-center">
-                <h1 class="text-3xl font-bold">
+                <h1 class="md:text-3xl text-sm font-bold">
                    <%= @tour.name %>
                 </h1>
             </div>
             <div>
-                <p class="text-skylife_blue">
+                <p class="text-skylife_blue text-xs">
                     Starts at
                 </p>
-                <h1 class="text-3xl font-bold text-orange-500">
+                <h1 class="md:text-3xl text-sm font-bold text-orange-500">
                     ₱<%= @tour.price_per_head %>/pax
                 </h1>
             </div>
         </div>
     </section>
 
-    <section class="inclusion py-20">
-        <div class="w-10/12 flex mx-auto">
-            <div class="flex-1">
-                <h1 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Travel Period: </h1>
-                <p class="text-2xl mb-8">
+    <section class="inclusion md:py-20 py-10">
+        <div class="md:w-10/12 w-11/12 flex mx-auto">
+            <div class="flex-1 mr-8">
+                <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Travel Period: </h1>
+                <p class="md:text-2xl text-sm mb-8">
                     <%= @tour.travel_date %>
                 </p>
 
                 <% if @tour_inclusion.any? %>
-                    <h2 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Inclusions: </h2>
+                    <h2 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Inclusions: </h2>
                     
-                    <ul class="list-disc mt-4 space-y-2 text-2xl list-none list-outside">
+                    <ul class="list-disc mt-4 space-y-2 md:text-2xl text-sm list-none list-outside">
                         <% @tour_inclusion.each do |item| %>
                             <li><%= item %></li>
                         <% end %>
@@ -41,7 +41,7 @@
                 <% end %>
             </div>
 
-            <div class="flex-1">
+            <div class="flex-2 gap-2">
                 <% if @tour.gallery_images.first.present? %>
                     <%= image_tag @tour.gallery_images.first, class: 'aspect-square', alt: 'src' %>
                 <% end %>
@@ -49,8 +49,8 @@
         </div>
     </section>
 
-    <section class="tour-inclusion py-20 bg-skylife_bg">
-        <div class="w-10/12 flex mx-auto">
+    <section class="tour-inclusion md:py-20 py-10 bg-skylife_bg">
+        <div class="md:w-10/12 w-11/12 flex mx-auto">
             <div class="flex-1">
                 <% if @tour.gallery_images.last.present? %>
                      <%= image_tag @tour.gallery_images.last, class: 'aspect-square', alt: 'src' %>
@@ -59,9 +59,9 @@
 
             <div class="flex-1 ml-8">
                 <% if @tour_exclusion.any? %>
-                    <h2 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Exclusions: </h2>
+                    <h2 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Exclusions: </h2>
                     
-                    <ul class="list-disc mt-4 space-y-2 text-2xl list-none">
+                    <ul class="list-disc mt-4 space-y-2 md:text-2xl text-sm list-none">
                         <% @tour_exclusion.each do |item| %>
                             <li><%= item %></li>
                         <% end %>
@@ -71,12 +71,12 @@
         </div>
     </section>
 
-    <section class="terms-and-condition py-20">
-        <div class="w-10/12 flex mx-auto">
+    <section class="terms-and-condition md:py-20 py-10">
+        <div class="md:w-10/12 w-11/12 flex mx-auto">
             <div class="flex-1">
-                <h1 class="text-2xl font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Terms and Condition</h1>
+                <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Terms and Condition</h1>
                 <% if @tour_terms_and_condition.any? %>
-                    <ul class="list-disc mt-4 space-y-2 list-none text-xl">
+                    <ul class="list-disc mt-4 space-y-2 list-none md:text-xl text-sm">
                         <% @tour_terms_and_condition.each do |item| %>
                             <li><%= item %></li>
                         <% end %>
@@ -84,8 +84,8 @@
                 <% end %>
             </div>
 
-            <div class="flex-1 flex items-center justify-center">
-               <button class="bg-skylife_orange text-white px-12 py-2 text-2xl rounded-lg">Inquire Now!</button>
+            <div class="flex-1 flex items-center justify-center ml-10">
+               <button class="bg-skylife_orange text-white px-12 py-2 md:text-2xl text-sm rounded-lg">Inquire Now!</button>
             </div>
         </div>
     </section>
