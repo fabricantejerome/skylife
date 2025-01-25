@@ -14,7 +14,7 @@
 </header>
 
 <nav class="px-5 py-5">
-  <ul class="grid md:grid-cols-9 sm:grid-cols-6 grid-cols-4 justify-between text-center font-medium gap-5 text-sm">
+  <ul class="grid md:grid-cols-9 auto-cols-[100px] grid-flow-col overflow-x-auto sm:overflow-visible justify-between text-center font-medium gap-5 text-sm">
     <% if @categories.any? %>
       <% @categories.each do |category| %>
         <li>
@@ -37,6 +37,7 @@
   </ul>
 </nav>
 
+
 <% @categories.each do |category|%>
   <% if category.tours.any? %>
     <section class="tours px-5 mt-8 mb-12">
@@ -46,7 +47,7 @@
         </h1>
       <% end %>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-3 auto-cols-[350px] grid-flow-col overflow-x-auto sm:overflow-visible gap-6">
         <% category.tours.order(:created_at => :desc).limit(3).each do |tour| %>
           <div>
             <% if tour.featured_image.present? %>
@@ -73,7 +74,7 @@
     <h1 class="text-lg font-medium mb-4 uppercase">New Tour Packages </h1>
   <% end %>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+  <div class="grid sm:grid-cols-3 auto-cols-[350px] grid-flow-col overflow-x-auto sm:overflow-visible gap-6">
     <% @new_packages.each do |tour| %>
       <div>
         <% if tour.featured_image.present? %>
@@ -96,8 +97,7 @@
 
 <section class="international-top-destination px-5 mt-8 mb-12">
   <h1 class="text-lg font-medium mb-4">International Top Destination</h1>
-
-  <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+  <div class="grid md:grid-cols-8 auto-cols-[100px] grid-flow-col overflow-x-auto sm:overflow-visible gap-2">
     <div class="relative">
       <%= link_to search_path(q: 'south korea'), class: 'link' do %>
         <%= image_tag 'South Korea.png', class: "rounded", alt: 'src' %>
@@ -152,7 +152,7 @@
 <section class="local-top-destination px-5 mt-8 mb-12">
   <h1 class="text-lg font-medium mb-4">Local Top Destination</h1>
 
-  <div class="inline-grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+  <div class="grid md:grid-cols-8 auto-cols-[100px] grid-flow-col overflow-x-auto sm:overflow-visible gap-2">
     <div class="relative">
       <%= link_to search_path(q: 'bohol'), class: 'link' do %>
         <%= image_tag 'Bohol.png', class: "rounded", alt: 'src' %>
