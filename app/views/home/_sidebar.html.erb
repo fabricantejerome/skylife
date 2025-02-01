@@ -1,0 +1,28 @@
+  <div class="w-full h-full fixed bg-black/50 top-0 right-0 z-10 hidden" data-navigation-target="sidebar">
+      <div class="md:w-1/2 w-full bg-white h-full fixed top-0 right-0 z-20">
+          <div class="flex flex-row-reverse p-4 cursor-pointer" data-action="click->navigation#closeSidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+          </div>
+          <ul class="grid md:grid-cols-6 grid-cols-4 justify-between text-center font-medium gap-4 text-sm px-4">
+          <% if @categories.any? %>
+            <% @categories.each do |category| %>
+              <li>
+                <%= link_to category_path(category), class: 'link' do %>
+                  <% if category.logo.present? %>
+                    <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+                  <% end %>
+                  <%= category.name %>
+                <% end %>
+              </li>
+            <% end %>
+          <% end %>
+
+          <li>
+            <%= link_to about_path, class: 'link' do %>
+              <%= image_tag 'ABOUT US.png', class: 'w-11/12', alt: 'src' %>
+              About Us
+            <% end %>
+          </li>
+        </ul>
+      </div>
+  </div>

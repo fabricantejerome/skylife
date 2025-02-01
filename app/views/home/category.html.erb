@@ -1,4 +1,6 @@
-<header class="relative" data-controller="navigation">
+<header class="relative">
+  <%= render 'sidebar' %>
+
   <%= video_tag "Home Page - Banner updated.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: 'w-full' %>
 
     <%= form_with url: search_path, method: :get do |form| %>
