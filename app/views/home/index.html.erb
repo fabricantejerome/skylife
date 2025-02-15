@@ -22,7 +22,7 @@
         <li>
           <%= link_to category_path(category), class: 'link' do %>
             <% if category.logo.present? %>
-              <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+              <%= image_tag category.logo, class: 'w-11/12 aspect-square rounded-full', alt: 'src' %>
             <% end %>
             <%= category.name %>
           <% end %>

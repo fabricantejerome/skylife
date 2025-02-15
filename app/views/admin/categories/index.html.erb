@@ -16,6 +16,9 @@
                     Name
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    Logo
+                </th>
+                <th scope="col" class="px-6 py-3">
                     Action
                 </th>
             </tr>
@@ -26,6 +29,9 @@
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                       <%= admin_category.name %>
                     </th>
+                    <td class="px-6 py-4">
+                      <%= image_tag admin_category.logo.present? ? admin_category.logo : '', class: "w-24 logo" %>
+                    </td>
                     <td class="px-6 py-4">
                       <%= link_to 'Edit', edit_admin_category_path(admin_category), class: 'font-medium text-green-800 dark:text-green-500 hover:underline' %>
                     </td>

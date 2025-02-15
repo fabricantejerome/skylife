@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
     # @flash_sales = Tour.home_flash_sale
-    @categories = Category.all
+    # @categories = Category.all
+    @categories = Category.order(created_at: :asc)
     @new_packages = Tour.home_new_packages
   end
 
