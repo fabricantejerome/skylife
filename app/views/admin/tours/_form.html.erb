@@ -62,16 +62,33 @@
   </div>
   
   <div class="my-5">
+    
+    <% if admin_tour.featured_image.present? %>
+      <%= image_tag admin_tour.featured_image, alt: 'src', class: 'w-1/2 mb-2' %>
+    <% end %>
+    
     <%= form.label :featured_image %>
     <%= form.file_field :featured_image %>
   </div>
 
   <div class="my-5">
+    <% if admin_tour.banner_image.present? %>
+      <%= image_tag admin_tour.banner_image, alt: 'src', class: 'w-1/2 mb-2' %>
+    <% end %>
+
     <%= form.label :banner_image %>
     <%= form.file_field :banner_image %>
   </div>
 
   <div class="my-5">
+     <% if admin_tour.gallery_images.any? %>
+        <div class="flex gap-2 mb-2">
+          <% admin_tour.gallery_images.each do |image| %>
+            <%= image_tag image, alt: 'src', class: 'w-1/2' %>
+          <% end %>
+        </div>
+    <% end %>
+
     <%= form.label :gallery_images %>
     <%= form.file_field :gallery_images, multiple: true %>
   </div>
