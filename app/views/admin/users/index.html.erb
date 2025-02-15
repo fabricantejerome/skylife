@@ -1,5 +1,9 @@
 <h1 class="text-2xl text-green-800 text-center uppercase font-medium mt-12">Users</h1>
 
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<% end %>
+
 <div class="text-end">
     <%= link_to 'Add New', new_admin_user_path, class: 'py-2 px-4 bg-sky-600 text-white rounded' %>
 </div>

@@ -25,10 +25,14 @@
     <section class="inclusion md:py-20 py-10">
         <div class="md:w-10/12 w-11/12 flex mx-auto">
             <div class="flex-1 mr-8">
-                <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Travel Period: </h1>
-                <p class="md:text-2xl text-sm mb-8">
-                    <%= @tour.travel_date %>
-                </p>
+                
+                <% if @tour.travel_date.present? %>
+                    <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Travel Period: </h1>
+                    <p class="md:text-2xl text-sm mb-8">
+                        <%= @tour.travel_date %>
+                    </p>
+                <% end %>
+                
 
                 <% if @tour_inclusion.any? %>
                     <h2 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Package Inclusions: </h2>
@@ -74,8 +78,9 @@
     <section class="terms-and-condition md:py-20 py-10">
         <div class="md:w-10/12 w-11/12 flex mx-auto">
             <div class="flex-1">
-                <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Terms and Condition</h1>
                 <% if @tour_terms_and_condition.any? %>
+                    <h1 class="md:text-2xl text-sm font-bold mb-4 border-l-4 border-skylife_blue bg-skylife_orange text-white inline-block rounded-lg px-4 py-2">Terms and Condition</h1>
+                
                     <ul class="list-disc mt-4 space-y-2 list-none md:text-xl text-sm">
                         <% @tour_terms_and_condition.each do |item| %>
                             <li><%= item %></li>

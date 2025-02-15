@@ -25,7 +25,7 @@ class Admin::ToursController < AdminController
 
     respond_to do |format|
       if @admin_tour.save
-        format.html { redirect_to admin_tours_path, notice: "Tour was successfully created." }
+        format.html { redirect_to admin_tours_path, notice: "Service was successfully created." }
         format.json { render :show, status: :created, location: [:admin, @admin_tour] }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class Admin::ToursController < AdminController
   def update
     respond_to do |format|
       if @admin_tour.update(admin_tour_params)
-        format.html { redirect_to admin_tours_path, notice: "Tour was successfully updated." }
+        format.html { redirect_to admin_tours_path, notice: "Service was successfully updated." }
         format.json { render :show, status: :ok, location: [:admin, @admin_tour] }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class Admin::ToursController < AdminController
     @admin_tour.destroy!
 
     respond_to do |format|
-      format.html { redirect_to admin_tours_path, status: :see_other, notice: "Tour was successfully destroyed." }
+      format.html { redirect_to admin_tours_path, status: :see_other, notice: "Service was successfully destroyed." }
       format.json { head :no_content }
     end
   end
