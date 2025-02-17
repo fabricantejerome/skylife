@@ -3,7 +3,7 @@ class Admin::CategoriesController < AdminController
 
   # GET /admin/categories or /admin/categories.json
   def index
-    @admin_categories = Category.all
+    @admin_categories = Category.all.order(:priority)
   end
 
   # GET /admin/categories/1 or /admin/categories/1.json
@@ -18,7 +18,7 @@ class Admin::CategoriesController < AdminController
   # GET /admin/categories/1/edit
   def edit
   end
-
+  
   # POST /admin/categories or /admin/categories.json
   def create
     @admin_category = Category.new(admin_category_params)
@@ -65,6 +65,6 @@ class Admin::CategoriesController < AdminController
 
     # Only allow a list of trusted parameters through.
     def admin_category_params
-      params.require(:category).permit(:name, :logo)
+      params.require(:category).permit(:name, :logo, :priority)
     end
 end

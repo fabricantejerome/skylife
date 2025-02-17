@@ -15,8 +15,6 @@ export default class extends Controller {
   }
 
   dragover(event) {
-    // console.log(event)
-    // console.log(this.getDataNode(event.target))
     event.preventDefault()
     return true;
   }
@@ -34,6 +32,21 @@ export default class extends Controller {
         dropTarget.insertAdjacentElement('afterend', draggedItem)
       }
     }
+
+    let formData = new FormData()
+    formData.append('reorderable_target_id', dropTarget.dataset.reorderableId)
+
+    let draggedItemUrl = draggedItem.dataset.reorderablePath
+    fetch(draggedItemUrl, {
+      method: 'PATCH',
+      body: formData,
+      credentials: "include",
+      datatype: "script",
+      headers: {
+        'X-CSRF-Token': document.querySelector(`meta[name="csrf-token"]`).content
+      },
+      redirect: 'manual'
+    })
   }
 
   dragend(event) {

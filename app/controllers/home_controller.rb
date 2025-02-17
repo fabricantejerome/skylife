@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
   def index
-    # @flash_sales = Tour.home_flash_sale
-    # @categories = Category.all
-    @categories = Category.order(created_at: :asc)
+    @categories = Category.all.order(:priority)
     @new_packages = Tour.home_new_packages
   end
 
@@ -17,7 +15,7 @@ class HomeController < ApplicationController
   end
 
   def category
-    @categories = Category.all
+    @categories = Category.all.order(:priority)
     if params[:id].present?
       @category = Category.find(params[:id])
       @tours = @category.tours
@@ -29,7 +27,7 @@ class HomeController < ApplicationController
   end
 
   def search
-    @categories = Category.all
+    @categories = Category.all.order(:priority)
     @tours = Tour.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", "%#{params[:q].downcase}%", "%#{params[:q].downcase}%").order(:created_at => :desc)
     @category_name = "Search results for '#{params[:q]}'"
   end
