@@ -1,0 +1,27 @@
+<div>
+    <% if notice.present? %>
+        <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    
+    <%= form_with(model: @banner, url: "/admin/save_banner") do |form| %>
+        <div class="mb-4">
+            <%= form.hidden_field :id %>
+            <%= form.label :attachment_type, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= form.select :attachment_type, ["Image", "Video"], {}, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+        <div class="mb-6">
+            <% if @banner.header_file.present? %>
+                <% if @banner.attachment_type == 'Image' %>
+                    <%= image_tag @banner.header_file, alt: 'src', class: 'w-1/2 mb-2' %>
+                <% else %>
+                    <%= video_tag @banner.header_file, controls: true, class: 'w-1/2 mb-2' %>
+                <% end %>
+            <% end %>
+            <%= form.label :header_file, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= form.file_field :header_file, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+        </div>
+        <div class="flex items-center justify-between">
+            <%= form.submit "Update Banner", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+        </div>
+    <% end %>
+</div>

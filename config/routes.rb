@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   end
   
   get 'admin' => "admin#index", as: :admin
+  get 'admin/banner' => "admin#banner", as: :admin_banner
+  post 'admin/save_banner' => "admin#save_banner", as: :admin_save_banner
+  patch 'admin/save_banner' => "admin#save_banner", as: :admin_update_banner
   get "about" => "home#about", as: :about
   get "tour/:id" => "home#tour", as: :tour
   get "category(/:id)" => "home#category", as: :category

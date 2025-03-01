@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_action :set_banner
+  
   def index
     @categories = Category.all.order(:priority)
     @new_packages = Tour.home_new_packages
@@ -30,5 +32,10 @@ class HomeController < ApplicationController
     @categories = Category.all.order(:priority)
     @tours = Tour.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", "%#{params[:q].downcase}%", "%#{params[:q].downcase}%").order(:created_at => :desc)
     @category_name = "Search results for '#{params[:q]}'"
+  end
+
+  private
+  def set_banner
+    @banner = Banner.first
   end
 end
