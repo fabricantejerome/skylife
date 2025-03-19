@@ -24,12 +24,12 @@
 </header>
 
 <nav class="px-5 py-5">
-  <ul class="grid md:grid-cols-9 auto-cols-[100px] grid-flow-col overflow-x-auto sm:overflow-visible justify-between text-center font-medium gap-5 text-sm">
+  <ul class="grid auto-cols-[100px] grid-flow-col overflow-x-auto overflow-visible justify-between text-center font-medium gap-5 text-sm">
     <% if @categories.any? %>
       <% @categories.each do |category| %>
         <li>
           <%= link_to category_path(category), class: 'link' do %>
-            <%= image_tag category.logo, class: 'w-11/12', alt: 'src' %>
+            <%= image_tag category.logo, class: 'w-11/12 aspect-square rounded-full', alt: 'src' %>
             <%= category.name %>
           <% end %>
         </li>
@@ -38,7 +38,7 @@
 
     <li>
       <%= link_to about_path, class: 'link' do %>
-        <%= image_tag 'ABOUT US.png', class: 'w-11/12', alt: 'src' %>
+        <%= image_tag 'ABOUT US.png', class: 'w-11/12 aspect-square rounded-full', alt: 'src' %>
         About Us
       <% end %>
     </li>
@@ -61,7 +61,7 @@
         
         <div class="text-center mt-6">
           <%= link_to tour_path(tour), class: 'bg-skylife_blue text-white px-12 py-2 rounded-full uppercase' do %>
-            Tour Details
+            View more details
           <% end %>
         </div>
       </div>
