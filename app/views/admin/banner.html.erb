@@ -17,6 +17,7 @@
                     <%= video_tag @banner.header_file, controls: true, class: 'w-1/2 mb-2' %>
                 <% end %>
             <% end %>
+            <p class="text-sm text-blue-600 mb-2">Please upload image/video with 1263x395px dimension</p>
             <%= form.label :header_file, class: "block text-gray-700 text-sm font-bold mb-2" %>
             <%= form.file_field :header_file, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
         </div>

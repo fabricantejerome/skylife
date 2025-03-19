@@ -67,6 +67,7 @@
       <%= image_tag admin_tour.featured_image, alt: 'src', class: 'w-1/2 mb-2' %>
     <% end %>
     
+    <p class="text-sm text-blue-600 mb-2">Please upload image with 1080x1080px dimension</p>
     <%= form.label :featured_image %>
     <%= form.file_field :featured_image %>
   </div>
@@ -76,6 +77,7 @@
       <%= image_tag admin_tour.banner_image, alt: 'src', class: 'w-1/2 mb-2' %>
     <% end %>
 
+    <p class="text-sm text-blue-600 mb-2">Please upload image with 1263x424px dimension</p>
     <%= form.label :banner_image %>
     <%= form.file_field :banner_image %>
   </div>
