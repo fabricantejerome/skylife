@@ -81,4 +81,5 @@ production:
   <<: *default
   database: skylife_production
   username: skylife
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV["SKYLIFE_DATABASE_PASSWORD"] %>
