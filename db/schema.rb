@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_01_171950) do
+ActiveRecord::Schema[7.1].define(version: 2025_06_01_145643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -93,6 +93,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_01_171950) do
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "external_link"
     t.index ["category_id"], name: "index_tours_on_category_id"
   end
 

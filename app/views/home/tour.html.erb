@@ -75,6 +75,22 @@
         </div>
     </section>
 
+    <% if @tour.itinerary.present? or @tour.external_link.present? %>
+        <section class="itinerary md:py-20 py-10 text-center">
+            <% if @tour.itinerary.present? %>
+                <div class="md:w-10/12 w-11/12 flex mx-auto mb-8">
+                    <%= image_tag @tour.itinerary, alt: 'src', class: 'w-full' %>
+                </div>
+            <%end%>
+
+            <% if @tour.external_link.present? %>
+                <%= link_to @tour.external_link, class: 'bg-skylife_orange text-white px-12 py-2 md:text-2xl text-sm rounded-lg mt-10', target: '_blank' do %>
+                    Book Now!
+                <% end %>
+            <% end %>
+        </section>
+    <% end %>
+
     <section class="terms-and-condition md:py-20 py-10">
         <div class="md:w-10/12 w-11/12 flex mx-auto">
             <div class="flex-1">

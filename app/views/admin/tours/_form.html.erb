@@ -96,6 +96,16 @@
   </div>
 
   <div class="my-5">
+    <% if admin_tour.itinerary.present? %>
+      <%= image_tag admin_tour.itinerary, alt: 'src', class: 'w-1/2 mb-2' %>
+    <% end %>
+
+    <p class="text-sm text-blue-600 mb-2">Please upload itinerary</p>
+    <%= form.label :itinerary %>
+    <%= form.file_field :itinerary %>
+  </div>
+
+  <div class="my-5">
     <%= form.label :meta_title %>
     <%= form.text_field :meta_title, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
@@ -133,6 +143,11 @@
   <div class="my-5">
     <%= form.label :tiktok %>
     <%= form.text_field :tiktok, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :external_link %>
+    <%= form.text_field :external_link, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
